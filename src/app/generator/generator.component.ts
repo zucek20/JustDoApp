@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-generator',
   templateUrl: './generator.component.html',
-  styleUrls: ['./generator.component.scss']
+  styleUrls: ['./generator.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GeneratorComponent implements OnInit {
 

@@ -18,13 +18,36 @@
 body {
   min-height: 100vh;
   font-family: Roboto, sans-serif;
-  background-color: rgb(133, 133, 133);
+  // background-color: rgb(255, 255, 255);
   color: white;
+  overflow-x: hidden;
+  font-size: 20px;
 }
 
 a {
   color: white;
   text-decoration: none;
+}
+
+div.wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h1, h2, h3 {
+  font-family: 'roboto slab' ,sans-serif;
 }
 
 $blue: #0039CB;
