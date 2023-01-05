@@ -1,1 +1,8 @@
-<p>list works!</p>
+<section id="list">
+  <div class="wrapper">
+
+    <div class="quote" *ngFor="let quote of quotes">
+      {{quote.quote}} - {{quote.author}}
+    </div>
+  </div>
+</section>

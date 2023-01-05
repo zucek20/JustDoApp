@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { quoteList } from 'src/assets/quoteList';
 
 @Component({
   selector: 'app-list',
@@ -8,6 +9,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 })
 export class ListComponent implements OnInit {
+  quotes = quoteList
 
   constructor() { }
 

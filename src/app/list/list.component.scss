@@ -1,0 +1,28 @@
+// variables
+$blue: #0039cb;
+$pink: #f33068;
+$purple: #9e00ff;
+$dark-pink: #bf1646;
+$shadow: 0px 8px 35px rgba(0, 0, 0, 0.25);
+
+section#list {
+  background: linear-gradient(
+    30deg,
+    rgba(0, 57, 203, 1) 0%,
+    rgba(158, 0, 255, 1) 100%
+  );
+  background-attachment: fixed;
+  padding: 100px 0;
+  min-height: 100vh;
+
+  div.wrapper {
+
+    div.quote {
+      background-color: #00000050;
+      padding: 20px 25px;
+      border-radius: 10px;
+      margin: 20px 5px;
+      line-height: 1.8rem;
+    }
+  }
+}
