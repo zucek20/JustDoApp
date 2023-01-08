@@ -10,10 +10,15 @@ export class AppComponent {
 
   @HostListener('window:scroll') darken(): void {
     const nav = document.querySelector('nav')
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset > 80) {
       nav.style.backgroundColor = '#00000060'
     } else {
       nav.style.backgroundColor = '#00000000'
     }
+  }
+
+  // instantly scroll to top after navigating
+  navigateTop() {
+    window.scrollTo({top: 0})
   }
 }

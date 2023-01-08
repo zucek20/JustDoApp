@@ -1,8 +1,8 @@
-import { quote } from "src/models/quote";
+import { quote } from "src/models/Quote";
 
 export const quoteList: quote[] = [
   {
-    quote: 'Nie pozwól, by twoje marzenia zostały marzeniami',
+    quote: `"Dont't let your dreams be dreams."`,
     author: 'Shia le bauf'
   },
   {

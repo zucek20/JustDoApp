@@ -11,12 +11,12 @@ main {
     rgba(0, 57, 203, 1) 0%,
     rgba(158, 0, 255, 1) 100%
   );
-  padding-top: 100px;
+  padding-top: 130px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 
   form {
     display: flex;
@@ -24,7 +24,7 @@ main {
     align-items: center;
 
     input {
-      margin: 30px 0;
+      margin: 20px 0 10px;
       display: block;
       background: #222222;
       border: 3px solid #FFFFFF;
@@ -33,6 +33,13 @@ main {
       font-size: 20px;
       color: white;
       text-align: center;
+    }
+
+    p.not-found {
+      color: red;
+      font-size: 16px;
+      margin-bottom: 15px ;
+      display: none;
     }
 
     button {
@@ -47,6 +54,7 @@ main {
       flex-shrink: 1;
       color: white;
       padding: 0 35px;
+      cursor: pointer;
 
       &:hover {
         background-color: $dark-pink;
@@ -61,6 +69,23 @@ main {
     border: 5px solid black;
     border-radius: 10px;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+
+    p.quote,
+    p.author {
+      width: 80%;
+      text-align: center;
+      text-shadow: 0 2px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    p.quote {
+      font-size: 30px;
+      font-family: 'roboto slab', serif;
+    }
   }
 }
 

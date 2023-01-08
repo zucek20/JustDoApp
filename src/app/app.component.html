@@ -5,9 +5,9 @@
   </figure>
 
   <ul>
-    <li><a routerLink="/generator" routerLinkActive="active">Generator</a></li>
-    <li><a routerLink="/" routerLinkActive="active">Strona główna</a></li>
-    <li><a routerLink="/list" routerLinkActive="active">Spis cytatów</a></li>
+    <li><a (click)="navigateTop()" routerLink="/generator" routerLinkActive="active">Generator</a></li>
+    <li><a (click)="navigateTop()" routerLink="/" routerLinkActive="active">Strona główna</a></li>
+    <li><a (click)="navigateTop()" routerLink="/list" routerLinkActive="active">Spis cytatów</a></li>
   </ul>
 </nav>
 

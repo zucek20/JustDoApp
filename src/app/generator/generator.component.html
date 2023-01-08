@@ -1,11 +1,19 @@
 <main>
   <form>
-    <label for="input">Wpisz słowo kluczowe (opcjonalnie)</label>
-    <input type="text" id="input">
-    <button>Generuj</button>
+    <label for="keyword">Wpisz słowo kluczowe w języku angielskim (opcjonalnie)</label>
+    <input
+      type="text"
+      id="keyword"
+      [(ngModel)]="keyword"
+      [ngModelOptions]="{standalone: true}"
+      (keydown)="onPreventSpace($event)"
+    >
+    <p class="not-found" #notFound>Nie znaleziono cytatów z podanym słowem.</p>
+    <button ngModel #button (click)="generate(); $event.preventDefault()">Generuj</button>
   </form>
 
-  <div class="generator">
-    <img src="" alt="">
+  <div class="generator" #img>
+    <p class="quote">{{ currentQuote.quote }}</p>
+    <p class="author">{{ currentQuote.author }}</p>
   </div>
 </main>
