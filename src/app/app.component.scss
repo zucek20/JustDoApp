@@ -58,6 +58,10 @@ nav {
       &.active {
         background-color: white;
         color: #4400cb;
+
+        &:hover {
+          outline: none;
+        }
       }
 
       &.primary {
@@ -65,6 +69,9 @@ nav {
 
         &.active {
           background-color: white;
+          &:hover {
+            background-color: white;
+          }
         }
         &:hover {
           background-color: $dark-pink;
@@ -167,6 +174,8 @@ footer {
     text-decoration: underline;
   }
 }
+
+
 
 @media screen and (width < 850px) {
   nav {

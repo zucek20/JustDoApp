@@ -67,10 +67,12 @@
       </li>
     </ul>
 </div>
+<div [@routeAnimations]="prepareRoute(outlet)" class="content">
 
-<router-outlet></router-outlet>
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 
-<footer>
+<!-- <footer>
   <p>Paweł Izdebski 2023 &copy;</p>
   <a href="https://github.com/zucek20/JustDoApp">GitHub</a>
-</footer>
+</footer> -->
