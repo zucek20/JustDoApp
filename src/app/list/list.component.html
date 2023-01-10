@@ -2,7 +2,7 @@
   <div class="wrapper">
 
     <div class="quote" *ngFor="let quote of quotes">
-      {{quote.quote}} - {{quote.author}}
+      <span class="quote">"</span>{{quote.quote}}<span class="quote">"</span> - <span class="author">{{quote.author}}</span>
     </div>
   </div>
 </section>

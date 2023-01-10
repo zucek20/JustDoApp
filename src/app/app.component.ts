@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { NavigateTopService } from './services/navigate-top.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,22 @@ import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
+  // @ViewChild('burger') burger: ElementRef<HTMLSpanElement>
+  // @ViewChild('close') close: ElementRef<HTMLSpanElement>
+  @ViewChild('mobileMenu') mobileMenu: ElementRef<HTMLDivElement>
+
+
+  constructor(
+    public navigate: NavigateTopService
+  ) {}
+
+  public openMenu(): void {
+    this.mobileMenu.nativeElement.style.left = '0%'
+  }
+
+  public closeMenu(): void {
+    this.mobileMenu.nativeElement.style.left = '100%'
+  }
 
   @HostListener('window:scroll') darken(): void {
     const nav = document.querySelector('nav')
@@ -15,10 +32,5 @@ export class AppComponent {
     } else {
       nav.style.backgroundColor = '#00000000'
     }
-  }
-
-  // instantly scroll to top after navigating
-  navigateTop() {
-    window.scrollTo({top: 0})
   }
 }

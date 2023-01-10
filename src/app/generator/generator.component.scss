@@ -22,12 +22,17 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+
+    label {
+      text-align: center;
+    }
 
     input {
       margin: 20px 0 10px;
       display: block;
       background: #222222;
-      border: 3px solid #FFFFFF;
+      border: 3px solid #ffffff;
       border-radius: 69px;
       padding: 10px;
       font-size: 20px;
@@ -36,10 +41,9 @@ main {
     }
 
     p.not-found {
-      color: red;
+      color: transparent;
       font-size: 16px;
-      margin-bottom: 15px ;
-      display: none;
+      margin-bottom: 15px;
     }
 
     button {
@@ -66,7 +70,9 @@ main {
     width: 500px;
     height: 500px;
     background-color: rgba(0, 0, 0, 0.497);
-    border: 5px solid black;
+    background-position: center;
+    background-size: contain;
+    border: 3px solid white;
     border-radius: 10px;
     margin-bottom: 50px;
     display: flex;
@@ -79,12 +85,12 @@ main {
     p.author {
       width: 80%;
       text-align: center;
-      text-shadow: 0 2px 1px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 2px 1px rgba(0, 0, 0, 0.8);
     }
 
     p.quote {
       font-size: 30px;
-      font-family: 'roboto slab', serif;
+      font-family: "roboto slab", serif;
     }
   }
 }
@@ -94,8 +100,16 @@ main {
     min-height: calc(100vh - 149px);
 
     div.generator {
-      width: calc(100vw - 10px);
-      height: calc(100vw - 10px);
+      width: calc(100vw - 20px);
+      height: calc(100vw - 20px);
+      margin: 5px;
+
+      p.quote {
+        font-size: 6vw;
+      }
+      p.author {
+        font-size: 5vw;
+      }
     }
   }
 }

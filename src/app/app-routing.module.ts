@@ -4,6 +4,9 @@ import { GeneratorComponent } from './generator/generator.component'
 import { StartComponent } from './start/start.component'
 import { ListComponent } from './list/list.component'
 
+
+
+
 const routes: Routes = [
   { path: '', component: StartComponent},
   { path: 'generator', component: GeneratorComponent},

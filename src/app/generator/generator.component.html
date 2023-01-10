@@ -9,7 +9,7 @@
       (keydown)="onPreventSpace($event)"
     >
     <p class="not-found" #notFound>Nie znaleziono cytatów z podanym słowem.</p>
-    <button ngModel #button (click)="generate(); $event.preventDefault()">Generuj</button>
+    <button #button (click)="generate(); $event.preventDefault()">Generuj</button>
   </form>
 
   <div class="generator" #img>

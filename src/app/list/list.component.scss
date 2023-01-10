@@ -16,13 +16,27 @@ section#list {
   min-height: 100vh;
 
   div.wrapper {
+    margin: 5px auto;
+
 
     div.quote {
       background-color: #00000050;
       padding: 20px 25px;
       border-radius: 10px;
-      margin: 20px 5px;
+      margin: 20px 10px;
       line-height: 1.8rem;
+
+      span.quote {
+        color: $pink;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: 'im fell english';
+        padding: 3px;
+      }
+
+      span.author {
+        font-style: italic;
+      }
     }
   }
 }

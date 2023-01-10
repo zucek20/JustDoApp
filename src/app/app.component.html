@@ -1,15 +1,72 @@
 <nav>
   <figure class="logo">
-    <img src="../assets/logo.svg" alt="logo">
+    <img src="../assets/logo.svg" alt="logo" class="logo-desktop">
+    <img src="../assets/logo-mobile.svg" alt="logo-mobile" class="logo-mobile">
     <p>JustDoApp</p>
   </figure>
 
-  <ul>
-    <li><a (click)="navigateTop()" routerLink="/generator" routerLinkActive="active">Generator</a></li>
-    <li><a (click)="navigateTop()" routerLink="/" routerLinkActive="active">Strona główna</a></li>
-    <li><a (click)="navigateTop()" routerLink="/list" routerLinkActive="active">Spis cytatów</a></li>
+  <ul class="nav-desktop">
+    <li>
+      <a
+      (click)="navigate.navigateTop()"
+      routerLink="/generator"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
+      class="primary">Generator</a>
+    </li>
+    <li>
+      <a
+      (click)="navigate.navigateTop()"
+      [routerLinkActiveOptions]="{exact: true}"
+      routerLink="/"
+      routerLinkActive="active">Strona główna</a>
+    </li>
+    <li>
+      <a
+      (click)="navigate.navigateTop()"
+      [routerLinkActiveOptions]="{exact: true}"
+      routerLink="/list"
+      routerLinkActive="active">Spis cytatów</a>
+    </li>
   </ul>
+
+  <span #burger class="nav-mobile material-symbols-outlined" (click)="openMenu()">
+    menu
+  </span>
 </nav>
+
+<div class="mobileMenu" #mobileMenu>
+  <span #close class="close material-symbols-outlined" (click)="closeMenu()">
+    close
+  </span>
+    <ul>
+      <li>
+        <a
+        (click)="navigate.navigateTop()"
+        (click)="closeMenu()"
+        routerLink="/generator"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        class="primary">Generator</a>
+      </li>
+      <li>
+        <a
+        (click)="navigate.navigateTop()"
+        (click)="closeMenu()"
+        [routerLinkActiveOptions]="{exact: true}"
+        routerLink="/"
+        routerLinkActive="active">Strona główna</a>
+      </li>
+      <li>
+        <a
+        (click)="navigate.navigateTop()"
+        (click)="closeMenu()"
+        [routerLinkActiveOptions]="{exact: true}"
+        routerLink="/list"
+        routerLinkActive="active">Spis cytatów</a>
+      </li>
+    </ul>
+</div>
 
 <router-outlet></router-outlet>
 

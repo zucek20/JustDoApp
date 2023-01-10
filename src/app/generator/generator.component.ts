@@ -42,9 +42,9 @@ export class GeneratorComponent implements AfterViewInit {
     if (this.keyword != undefined) {
       let filteredQuotes = this.quoteList.filter(quote => quote.quote.includes(this.keyword))
       if (filteredQuotes.length == 0) {
-        this.notFound.nativeElement.style.display = 'block'
+        this.notFound.nativeElement.style.color = 'red'
       } else {
-        this.notFound.nativeElement.style.display = 'none'
+        this.notFound.nativeElement.style.color = 'transparent'
         this.currentQuote = filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)]
         this.randomizeBackground()
       }

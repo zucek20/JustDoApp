@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { NavigateTopService } from '../services/navigate-top.service';
 
 @Component({
   selector: 'app-start',
@@ -9,7 +10,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public navigate: NavigateTopService
+  ) { }
 
   ngOnInit(): void {
   }
