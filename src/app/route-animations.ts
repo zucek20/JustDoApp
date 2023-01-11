@@ -3,10 +3,7 @@ import {
   transition,
   style,
   query,
-  group,
-  animateChild,
   animate,
-  keyframes,
 } from '@angular/animations'
 
 export const fader =
@@ -21,14 +18,14 @@ export const fader =
         })
       ]),
       query(':enter', [
-        animate('600ms ease',
+        animate('400ms ease',
           style({
             opacity: 1,
           })
         ),
       ]),
       query(':leave', [
-        animate('600ms ease',
+        animate('400ms ease',
           style({
             opacity: 0,
           })

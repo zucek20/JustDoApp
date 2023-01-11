@@ -5,7 +5,7 @@ import { StartComponent } from './start/start.component'
 import { ListComponent } from './list/list.component'
 
 const routes: Routes = [
-  { path: '', component: StartComponent},
+  { path: '', component: StartComponent, data: { animation: '0'}},
   { path: 'generator', component: GeneratorComponent, data: { animation: '1'}},
   { path: 'list', component: ListComponent, data: { animation:'2'}}
 ];
