@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, AfterViewInit, HostListener, ViewChild, ElementRef, } from '@angular/core';
-import { quoteList } from '../../assets/quoteList';
+import { quoteList } from 'assets/quoteList';
 import { quote } from 'src/models/Quote';
 
 @Component({
@@ -35,7 +35,7 @@ export class GeneratorComponent implements AfterViewInit {
   }
 
   private randomizeBackground() {
-    this.img.nativeElement.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../../assets/images/${Math.ceil(Math.random() * 10)}.jpg)`
+    this.img.nativeElement.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(assets/images/${Math.ceil(Math.random() * 10)}.jpg)`
   }
 
   public generate() {
