@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, AfterViewInit, HostListener, ViewChild, ElementRef, } from '@angular/core';
-import { quoteList } from 'assets/quoteList';
+import { quoteList } from '../../assets/quoteList';
 import { quote } from 'src/models/Quote';
 
 @Component({
