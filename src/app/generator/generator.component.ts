@@ -23,7 +23,6 @@ export class GeneratorComponent implements AfterViewInit {
     this.quoteList = quoteList;
   }
 
-  // generate random number in range 0 - quoteList.length
   private randomizeQuote(): number {
     return Math.floor(Math.random() * quoteList.length)
   }
@@ -40,7 +39,7 @@ export class GeneratorComponent implements AfterViewInit {
 
   public generate() {
     if (this.keyword != undefined) {
-      let filteredQuotes = this.quoteList.filter(quote => quote.quote.includes(this.keyword))
+      let filteredQuotes = this.quoteList.filter(quote => quote.quote.toLowerCase().includes(this.keyword.toLowerCase()))
       if (filteredQuotes.length == 0) {
         this.notFound.nativeElement.style.color = 'red'
       } else {
