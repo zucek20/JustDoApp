@@ -1,8 +1,4 @@
-// variables
-$blue: #0039cb;
-$pink: #f33068;
-$purple: #9e00ff;
-$dark-pink: #bf1646;
+@import "./variables.scss";
 
 nav {
   position: fixed;
@@ -91,15 +87,11 @@ nav {
 div.mobileMenu {
   left: 100%;
   height: 100vh;
-  background: linear-gradient(
-    30deg,
-    rgb(0, 46, 161) 0%,
-    rgb(114, 0, 185) 100%
-  );
+  background: linear-gradient(30deg, rgb(0, 46, 161) 0%, rgb(114, 0, 185) 100%);
   position: fixed;
   z-index: 11;
   width: 100vw;
-  transition: .3s ease;
+  transition: 0.3s ease;
 
   span.close {
     width: 60px;
@@ -124,7 +116,6 @@ div.mobileMenu {
     list-style: none;
 
     li {
-
       a {
         padding: 10px 30px;
         line-height: 45px;
@@ -174,8 +165,6 @@ footer {
     text-decoration: underline;
   }
 }
-
-
 
 @media screen and (width < 850px) {
   nav {

@@ -1,9 +1,4 @@
-// variables
-$blue: #0039cb;
-$pink: #f33068;
-$purple: #9e00ff;
-$dark-pink: #bf1646;
-$shadow: 0px 8px 35px rgba(0, 0, 0, 0.25);
+@import "../variables";
 
 main {
   background: linear-gradient(

@@ -1,9 +1,4 @@
-// variables
-$blue: #0039cb;
-$pink: #f33068;
-$purple: #9e00ff;
-$dark-pink: #bf1646;
-$shadow: 0px 8px 35px rgba(0, 0, 0, 0.25);
+@import "../variables";
 
 header {
   background: rgb(0, 57, 203);
@@ -23,10 +18,6 @@ header {
       div.title {
         display: flex;
         flex-direction: column;
-
-        h1 {
-          text-align: center;
-        }
 
         button {
           background-color: $pink;
@@ -111,7 +102,6 @@ section#start {
       h2 {
         margin: 60px 5px 80px;
         color: black;
-        text-align: center;
       }
 
       div.panel-wrap {
@@ -202,7 +192,6 @@ section#start {
   header {
     div.wrapper {
       div.heading {
-
         div.title {
           width: 100%;
           h1 {
@@ -221,13 +210,11 @@ section#start {
 
     div.triangle {
       transform: translateY(-89px);
-
     }
   }
 
   section#start {
     div.wrapper {
-
       div.promoWrap {
         transform: translateY(-120px);
         margin: 10px;

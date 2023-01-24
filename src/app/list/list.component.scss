@@ -1,9 +1,4 @@
-// variables
-$blue: #0039cb;
-$pink: #f33068;
-$purple: #9e00ff;
-$dark-pink: #bf1646;
-$shadow: 0px 8px 35px rgba(0, 0, 0, 0.25);
+@import "../variables";
 
 section#list {
   background: linear-gradient(
@@ -18,6 +13,17 @@ section#list {
   div.wrapper {
     margin: 5px auto;
 
+    .line {
+      width: 90%;
+      margin: auto;
+      height: 2px;
+      background-color: white;
+      margin-bottom: 70px;
+    }
+
+    h2 {
+      margin: 100px auto 35px;
+    }
 
     div.quote {
       background-color: #00000050;
@@ -30,7 +36,7 @@ section#list {
         color: $pink;
         font-size: 1.5rem;
         font-weight: bold;
-        font-family: 'im fell english';
+        font-family: "im fell english";
         padding: 3px;
       }
 
