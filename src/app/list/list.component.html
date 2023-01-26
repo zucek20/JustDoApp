@@ -2,9 +2,9 @@
   <div class="wrapper">
     <h2>Spis Cytatów</h2>
     <div class="line"></div>
-    <div class="quote" *ngFor="let quote of quotes">
+    <blockquote class="quote" *ngFor="let quote of quotes">
       <span class="quote">"</span>{{quote.quote}}<span class="quote">"</span> - <span class="author">{{quote.author}}</span>
-    </div>
+    </blockquote>
   </div>
 </section>
 
