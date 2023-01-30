@@ -3,6 +3,8 @@ div.navwrap {
   position: fixed;
   width: 100vw;
   z-index: 10;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
 
   nav {
     padding: 10px;
@@ -10,8 +12,6 @@ div.navwrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.3s;
-    backdrop-filter: blur(5px);
     margin: 0 auto;
 
     figure.logo {
@@ -25,7 +25,6 @@ div.navwrap {
 
       img.logo-mobile {
         display: none;
-        // height: 45px;
         margin: -10px 0 0 5px;
       }
 
@@ -105,7 +104,7 @@ div.mobileMenu {
     text-align: right;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 10px 20px;
   }
 
   ul {
@@ -170,25 +169,27 @@ footer {
   }
 }
 
-@media screen and (width < 850px) {
-  nav {
-    figure.logo {
-      img.logo-desktop,
-      p {
+@media screen and (width < 870px) {
+  div.navwrap {
+    nav {
+      figure.logo {
+        img.logo-desktop,
+        p {
+          display: none;
+        }
+
+        img.logo-mobile {
+          display: block;
+        }
+      }
+
+      ul.nav-desktop {
         display: none;
       }
 
-      img.logo-mobile {
+      span.nav-mobile {
         display: block;
       }
-    }
-
-    ul.nav-desktop {
-      display: none;
-    }
-
-    span.nav-mobile {
-      display: block;
     }
   }
 }

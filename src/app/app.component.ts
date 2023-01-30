@@ -33,7 +33,7 @@ export class AppComponent {
   }
 
   @HostListener('window:scroll') darken(): void {
-    const nav = document.querySelector('nav')
+    const nav: any = document.querySelector('.navwrap')
     if (window.pageYOffset > 80) {
       nav.style.backgroundColor = '#00000060'
     } else {
