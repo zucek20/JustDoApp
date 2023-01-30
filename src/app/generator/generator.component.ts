@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, AfterViewInit, HostListener, ViewChild, ElementRef, } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { quoteList } from '../../assets/quoteList';
 import { quote } from 'src/models/Quote';
 
@@ -13,6 +13,7 @@ export class GeneratorComponent implements AfterViewInit {
   @ViewChild('img') img: ElementRef<HTMLDivElement>
   @ViewChild('notFound') notFound: ElementRef<HTMLParagraphElement>
   private quoteList: quote[]
+  public message = ''
   // initial quote values
   public currentQuote: quote = {
     quote: '',
@@ -41,9 +42,9 @@ export class GeneratorComponent implements AfterViewInit {
     if (this.keyword != undefined) {
       let filteredQuotes = this.quoteList.filter(quote => quote.quote.toLowerCase().includes(this.keyword.toLowerCase()))
       if (filteredQuotes.length == 0) {
-        this.notFound.nativeElement.style.color = 'red'
+        this.message = 'Nie znaleziono cytatów z podanym słowem.'
       } else {
-        this.notFound.nativeElement.style.color = 'transparent'
+        this.message = ''
         this.currentQuote = filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)]
         this.randomizeBackground()
       }

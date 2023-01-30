@@ -8,7 +8,7 @@
       [ngModelOptions]="{standalone: true}"
       (keydown)="onPreventSpace($event)"
     >
-    <p class="not-found" #notFound>Nie znaleziono cytatów z podanym słowem.</p>
+    <p class="not-found">{{message}}</p>
     <button #button (click)="generate(); $event.preventDefault()">Generuj</button>
   </form>
 

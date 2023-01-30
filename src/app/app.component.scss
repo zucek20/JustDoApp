@@ -1,86 +1,90 @@
 @import "./variables.scss";
-
-nav {
+div.navwrap {
   position: fixed;
-  padding: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100vw;
   z-index: 10;
-  transition: 0.3s;
-  backdrop-filter: blur(5px);
 
-  figure.logo {
+  nav {
+    padding: 10px;
+    max-width: 1200px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
 
-    img.logo-desktop {
-      display: block;
-      height: 45px;
-      margin-right: 5px;
-    }
+    figure.logo {
+      display: flex;
 
-    img.logo-mobile {
-      display: none;
-      // height: 45px;
-      margin: -10px 0 0 5px;
-    }
-
-    p {
-      font-weight: 500;
-      font-family: "roboto slab", sans-serif;
-      font-size: 30px;
-    }
-  }
-
-  ul.nav-desktop {
-    display: flex;
-    list-style: none;
-
-    a {
-      padding: 10px 30px;
-      line-height: 45px;
-      text-decoration: none;
-      font-size: 22px;
-      border-radius: 30px;
-      margin-right: 20px;
-      transition: 0.2s;
-      outline: 2px solid rgba(0, 0, 0, 0);
-
-      &:hover {
-        outline: 2px solid white;
+      img.logo-desktop {
+        display: block;
+        height: 45px;
+        margin-right: 5px;
       }
 
-      &.active {
-        background-color: white;
-        color: #4400cb;
+      img.logo-mobile {
+        display: none;
+        // height: 45px;
+        margin: -10px 0 0 5px;
+      }
+
+      p {
+        font-weight: 500;
+        font-family: "roboto slab", sans-serif;
+        font-size: 30px;
+      }
+    }
+
+    ul.nav-desktop {
+      display: flex;
+      list-style: none;
+
+      a {
+        padding: 10px 30px;
+        line-height: 45px;
+        text-decoration: none;
+        font-size: 22px;
+        border-radius: 30px;
+        margin-right: 20px;
+        transition: 0.2s;
+        outline: 2px solid rgba(0, 0, 0, 0);
 
         &:hover {
-          outline: none;
+          outline: 2px solid white;
         }
-      }
-
-      &.primary {
-        background-color: $pink;
 
         &.active {
           background-color: white;
+          color: #4400cb;
+
           &:hover {
-            background-color: white;
+            outline: none;
           }
         }
-        &:hover {
-          background-color: $dark-pink;
-          outline: none;
+
+        &.primary {
+          background-color: $pink;
+
+          &.active {
+            background-color: white;
+            &:hover {
+              background-color: white;
+            }
+          }
+          &:hover {
+            background-color: $dark-pink;
+            outline: none;
+          }
         }
       }
     }
-  }
 
-  span.nav-mobile {
-    display: none;
-    font-size: 60px;
-    margin-right: 30px;
+    span.nav-mobile {
+      display: none;
+      font-size: 60px;
+      margin-right: 30px;
+    }
   }
 }
 
