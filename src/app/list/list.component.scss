@@ -46,3 +46,15 @@ section#list {
     }
   }
 }
+
+@media screen and (width < 500px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    a {
+      display: block;
+    }
+  }
+}

@@ -16,20 +16,20 @@ export const fader =
           width: '100%',
           opacity: 0,
         })
-      ]),
+      ], {optional: true}),
       query(':enter', [
         animate('400ms ease',
           style({
             opacity: 1,
           })
         ),
-      ]),
+      ], {optional: true}),
       query(':leave', [
         animate('400ms ease',
           style({
             opacity: 0,
           })
         ),
-      ]),
+      ], {optional: true}),
     ])
   ])
